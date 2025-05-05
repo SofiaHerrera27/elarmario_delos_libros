@@ -1,0 +1,11 @@
+<!-- register.component.html -->
+<h2>Registro</h2>
+<input [(ngModel)]="nombre" placeholder="Nombre">
+<input [(ngModel)]="correo" placeholder="Correo">
+<input [(ngModel)]="password" placeholder="Contraseña">
+<select [(ngModel)]="rol">
+  <option value="user">Usuario</option>
+  <option value="admin">Admin</option>
+</select>
+<button (click)="registrar()">Registrar</button>
+<p>{{ mensaje }}</p>

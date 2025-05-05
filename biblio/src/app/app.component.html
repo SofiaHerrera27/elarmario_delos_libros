@@ -1,0 +1,13 @@
+<!-- src/app/app.component.html -->
+<nav>
+  <button (click)="cambiarVista('home')">Inicio</button>
+  <button (click)="cambiarVista('login')">Login</button>
+  <button (click)="cambiarVista('register')">Registro</button>
+  <button *ngIf="auth.getUsuario()" (click)="cerrarSesion()">Cerrar Sesión</button>
+</nav>
+
+<div *ngIf="vista === 'home'">Bienvenido a la App</div>
+<app-login *ngIf="vista === 'login'" (loginExitoso)="onLoginSuccess()"></app-login>
+<app-register *ngIf="vista === 'register'"></app-register>
+<app-admin *ngIf="vista === 'admin'"></app-admin>
+<app-user *ngIf="vista === 'user'"></app-user>
