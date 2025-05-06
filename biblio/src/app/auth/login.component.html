@@ -1,6 +1,9 @@
 <!-- login.component.html -->
-<h2>Login</h2>
-<input [(ngModel)]="correo" placeholder="Correo">
-<input [(ngModel)]="password" type="password" placeholder="Contraseña">
-<button (click)="login()">Entrar</button>
-<p *ngIf="error">{{ error }}</p>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <input [(ngModel)]="correo" placeholder="Correo" class="login-input">
+    <input [(ngModel)]="password" type="password" placeholder="Contraseña" class="login-input">
+    <button (click)="login()">Entrar</button>
+    <p *ngIf="error" class="login-error">{{ error }}</p>
+</div>

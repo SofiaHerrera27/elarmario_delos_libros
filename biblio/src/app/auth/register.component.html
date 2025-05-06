@@ -1,11 +1,14 @@
 <!-- register.component.html -->
-<h2>Registro</h2>
-<input [(ngModel)]="nombre" placeholder="Nombre">
-<input [(ngModel)]="correo" placeholder="Correo">
-<input [(ngModel)]="password" placeholder="Contraseña">
-<select [(ngModel)]="rol">
-  <option value="user">Usuario</option>
-  <option value="admin">Admin</option>
-</select>
-<button (click)="registrar()">Registrar</button>
-<p>{{ mensaje }}</p>
+<div class="registro-container">
+  <h2>Registro</h2>
+  <input [(ngModel)]="nombre" placeholder="Nombre" class="registro-input">
+  <input [(ngModel)]="correo" placeholder="Correo" class="registro-input">
+  <input [(ngModel)]="password" placeholder="Contraseña" class="registro-input" type="password">
+  <select [(ngModel)]="rol" class="registro-input">
+    <option value="user">Usuario</option>
+    <option value="admin">Admin</option>
+  </select>
+  <button (click)="registrar()">Registrar</button>
+  <p class="registro-mensaje">{{ mensaje }}</p>
+</div>
+

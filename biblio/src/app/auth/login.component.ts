@@ -8,8 +8,9 @@ import { FormsModule } from '@angular/forms';
     selector: 'app-login', // Corregido: cambiado de 'app-register' a 'app-login'
     standalone: true,
     imports: [CommonModule, FormsModule],
-    templateUrl: './login.component.html' // Corregido: cambiado de './register.component.html' a './login.component.html'
-})
+    templateUrl: './login.component.html', // Corregido: cambiado de './register.component.html' a './login.component.html'
+    styleUrls: ['./login.component.css'], // Corregido: cambiado de './register.component.css' a './login.component.css'
+  })
   
 export class LoginComponent {
   correo = '';

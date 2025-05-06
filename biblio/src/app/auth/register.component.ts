@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms'; // Añadido
   selector: 'app-register',
   standalone: true, // Añadido: configurado como componente standalone
   imports: [CommonModule, FormsModule], // Añadido: importado módulos necesarios
-  templateUrl: './register.component.html'
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
   nombre = '';
