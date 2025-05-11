@@ -1,0 +1,40 @@
+<!-- src/app/crud.component.html -->
+<div class="login-container">
+  <h2>Cargar archivo CSV</h2>
+  <label class="file-upload">
+    <h3>Ingresa archivo CSV</h3>
+    <input type="file" (change)="onFileUpload($event)" accept=".csv" hidden />
+  </label>
+
+  <div class="actions" *ngIf="registros.length">
+    <button (click)="agregarRegistro()">Agregar Registro</button>
+    <button (click)="limpiarRegistros()">Limpiar Registros</button>
+    <button (click)="guardarComoCSV()">Guardar como CSV</button>
+  </div>
+
+  <table *ngIf="registros.length" class="styled-table">
+    <thead>
+      <tr>
+        <th *ngFor="let header of headers">{{ header }}</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of registros.slice(paginaActual * tamanioPagina, (paginaActual + 1) * tamanioPagina); let i = index">
+        <td *ngFor="let key of headers">
+          <input [(ngModel)]="row[key]" class="login-input" />
+        </td>
+        <td>
+          <button (click)="eliminarRegistro(i)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="registros.length > tamanioPagina" class="pagination">
+    <button (click)="paginaActual = paginaActual - 1" [disabled]="paginaActual === 0">Anterior</button>
+    <span>Página {{ paginaActual + 1 }} de {{ totalPaginas }}</span>
+    <button (click)="paginaActual = paginaActual + 1" [disabled]="paginaActual + 1 >= totalPaginas">Siguiente</button>
+  </div>
+</div>
+

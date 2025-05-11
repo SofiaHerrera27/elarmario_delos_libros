@@ -1,8 +1,14 @@
-// src/app/user.component.ts
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-user',
-  template: `<h2>Panel de Usuario</h2>`
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css'],
 })
-export class UserComponent {}
+export class UserComponent {
+  constructor(public auth: AuthService) {}
+}

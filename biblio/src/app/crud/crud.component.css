@@ -1,0 +1,89 @@
+.login-container {
+  max-width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  color: #072c54;
+}
+
+/* Botón para subir archivo */
+.file-upload {
+  background-color: #072c54;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.file-upload:hover {
+  background-color: #0b3a6e;
+}
+
+/* Botones generales de acción */
+.actions button {
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: #072c54;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #0b3a6e;
+}
+
+/* Tabla */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.styled-table th, .styled-table td {
+  border: 1px solid #cccccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.styled-table th {
+  background-color: #072c54;
+  color: white;
+}
+
+/* Campos de entrada */
+.login-input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Paginación */
+.pagination {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  background-color: #072c54;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
